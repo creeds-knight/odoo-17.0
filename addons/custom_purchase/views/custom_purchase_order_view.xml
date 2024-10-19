@@ -3,7 +3,7 @@
     <field name='name'>purchase.order.form.inherit</field>
     <field name='model'>custom.purchase.order</field>
     <field name='inherit_id' ref='purchase.purchase_order_form'/>
-    <field name="mode">primary</field>
+    <field name="priority" eval='16'/>
     <field name='arch' type='xml'>
       <xpath expr='//field[@name="partner_id"]' position='attributes'>
         <attribute name='invisible'>1</attribute>

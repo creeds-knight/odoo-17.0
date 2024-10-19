@@ -39,13 +39,6 @@
     <field name='view_id' ref='view_custom_purchase_bid_tree'/>
   </record>
 
-	<record id='action_custom_purchase_form' model='ir.actions.act_window'>
-    <field name='name'>Vendor Bids</field>
-    <field name='res_model'>custom.purchase.bid</field>
-    <field name='view_mode'>tree,form</field>
-    <field name='view_id' ref='view_custom_purchase_bid_forms'/>
-    <field name='target'>current</field>
-  </record>
 
   <menuitem id='menu_purchase_bid' name='Vendor Bids' parent='purchase.menu_purchase_root' action='action_custom_purchase_tree'/>
 

@@ -26,6 +26,7 @@ Long description of module's purpose
         #'views/views.xml',
         #'views/templates.xml',
         'views/custom_purchase_order_view.xml',
+        'views/custom_purchase_bid_view.xml',
     ],
     # only loaded in demonstration mode
     #'demo': [
