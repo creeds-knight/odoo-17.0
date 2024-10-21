@@ -5,8 +5,8 @@ class PurchaseBid(models.Model):
     _name = 'custom.purchase.bid'
     _description = 'Vendor Bid'
 
-    name = fields.Char('Bid reference', required=True, default='Unknown')
-    order_id = fields.Many2one('custom.purchase.order', string='RFQ')
+    name = fields.Char('Bid reference', required=True, default='unknown')
+    order_id = fields.Many2one('purchase.order', string='RFQ')
     vendor_id = fields.Many2one('res.partner', string='Vendor', required=True)
     bid_amount = fields.Float('Bid Amount', required=True, default=0)
     bid_date = fields.Datetime('Bid Date', default=fields.Datetime.now)
