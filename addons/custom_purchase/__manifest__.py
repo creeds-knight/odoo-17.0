@@ -18,7 +18,7 @@ Long description of module's purpose
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'purchase'],
+    'depends': ['base', 'purchase', 'hr', 'product'],
 
     # always loaded
     'data': [
@@ -27,6 +27,7 @@ Long description of module's purpose
         #'views/templates.xml',
         'views/custom_purchase_order_view.xml',
         'views/custom_purchase_bid_view.xml',
+        'views/custom_purchase_request_view.xml',
     ],
     # only loaded in demonstration mode
     #'demo': [
