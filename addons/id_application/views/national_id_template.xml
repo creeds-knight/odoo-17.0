@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
     <link rel='stylesheet' href='/id_application/static/src/css/template1.css'/>
 
-    <div class='container'>
+    <div class='container' t-nocache='True'>
       <div class='form-container'>
         <h2 class='form-title'>National ID Application</h2>
         <form action="/national_id/application/submit" method="post" enctype="multipart/form-data">
@@ -50,15 +50,22 @@
       </div>
     </div>
   </template>
+	<template id="thank_you" name="Thank you">
+		<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; text-align: center;">
+			<h3 style="font-size: 1.8rem; color: #4CAF50; margin-bottom: 10px;">Thank you for your submission!</h3>
+			<p style="font-size: 1.2rem; color: #555;">Your application has been received and is under review.</p>
+		</div>
+	</template>
 
-  <template id='thank_you' name='Thank you'>
-    <h3> Thank you for your submission! </h3>
-    <p> Your application has been received and is under review. </p>
-  </template>
+	<template id="error" name="Error">
+		<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; text-align: center; border: 1px solid #f44336; background-color: #fdecea; border-radius: 8px;">
+			<h3 style="font-size: 1.8rem; color: #f44336; margin-bottom: 10px;">Submission Failed</h3>
+			<p style="font-size: 1.2rem; color: #333;">
+				There was an error with your submission: <t t-esc="error" />
+			</p>
+		</div>
+	</template>
 
-  <template id='error' name='Error'>
-    <h3> Submission Failed</h3>
-    <p> There was an Error with your submission: <t t-esc='error'/></p>
-  </template>
+
 </odoo>
 
