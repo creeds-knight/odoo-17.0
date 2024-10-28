@@ -1,12 +1,10 @@
 /* template1.css */
 
 html, body {
-    /*background-color: #0A0D17 !important;*/
-    background: radial-gradient(circle at 30% 43%, #000000 37%, #00BCD4 100%, #8782EE 100%);
+    background-color: #3d82f2 !important;*/
     color: #ffffff !important; /* Light text color for contrast */
     font-family: Arial, sans-serif;
     padding: 20px;
-    background-image: url('/id_application/static/src/images/crested_crane.png'    );
 
 }
 
@@ -14,7 +12,7 @@ html, body {
     max-width: 600px;
     margin: auto;
     padding: 2rem;
-    background-color: #495057; /* Darker box for the form */
+    background-color: #02090d; /* Darker box for the form */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 128, 0, 0.7); /* Green box shadow */
 }
