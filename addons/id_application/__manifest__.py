@@ -18,12 +18,14 @@ Long description of module's purpose
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','website'],
+    'depends': ['base','website','mail'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/national_id_template.xml',
+        'data/national_id_sequence.xml',
+        'views/national_id_views.xml',
     ],
     'assets': {
         'web.assets_frontend': [
@@ -34,6 +36,9 @@ Long description of module's purpose
     'demo': [
         'demo/demo.xml',
     ],
+
+    'installable': True,
+    'application': True,
 
 }
 
