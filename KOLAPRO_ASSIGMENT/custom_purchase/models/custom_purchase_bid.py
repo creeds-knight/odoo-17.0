@@ -14,15 +14,14 @@ class PurchaseBid(models.Model):
 
     @api.onchange('is_winning_bid')
     def _onchange_is_winning_bid(self):
-        for bid in self:
-            if bid.is_winning_bid and bid.id:
-                other_bids = self.search([
-                    ('order_id', '=', bid.order_id.id),
-                    ('is_winning_bid', '=', True),
-                    ('id', '!=', bid.id)
-                ])
-                if other_bids:
-                    other_bids.write({'is_winning_bid': False})
+        if self.is_winning_bid:
+            other_bids = self.search([
+                ('order_id', '=', self.order_id.id),
+                ('is_winning_bid', '=', True),
+                ('id', '!=', self.id)
+            ])
+            if other_bids:
+                other_bids.write({'is_winning_bid': False})
 
     @api.constrains('is_winning_bid')
     def _check_winning_bid(self):
@@ -39,4 +38,3 @@ class PurchaseBid(models.Model):
                     'partner_id': bid.vendor_id.id,
                     'amount_total': bid.bid_amount
                 })
-
